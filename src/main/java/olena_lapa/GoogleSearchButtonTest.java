@@ -1,4 +1,4 @@
-package test_olena_lapa;
+package olena_lapa;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;

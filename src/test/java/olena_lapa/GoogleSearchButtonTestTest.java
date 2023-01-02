@@ -1,4 +1,4 @@
-package test_olena_lapa;
+package olena_lapa;
 
 import junit.framework.TestCase;
 
