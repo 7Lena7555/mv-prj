@@ -15,25 +15,26 @@ public class LogoTest {
         $x("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]")
                 .setValue("test automation")
                 .sendKeys(Keys.ENTER);
-        return this;
-        String String;
-        final var s = String = "searchTerm";
+        return this.open();
+        String string;
+        final var s = string= "searchTerm";
         {
             String inputFieldPath = "//tbody/tr[1]/td[6]/a[1]";
             $x(inputFieldPath).sendKeys("searchTerm");
             $x("//Page 5").click();
-            return new LogoTest().open();
-            public boolean isGoogleLogoVisible () {
-            try {
-                $x("//body/div[1]/div[2]/div[1]/img[1]").shouldBe(Condition.visible);
-                return true;
+            final var open = new LogoTest().open();
+            return open;
+            boolean isGoogleLogoVisible;
+            {
+                try {
+                    $x("//body/div[1]/div[2]/div[1]/img[1]").shouldBe(Condition.visible);
+                    return true;
 
-            } catch (AssertionError ex) {
-                return false;
+                } catch (AssertionError ex) {
+                    return false;
+                }
+
             }
-
         }
-
-
-
     }
+}

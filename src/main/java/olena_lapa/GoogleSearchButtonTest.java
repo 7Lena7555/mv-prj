@@ -11,7 +11,7 @@ public class GoogleSearchButtonTest {
     public class googleSearchButtonTest {
         @Test
 
-        public boolean verifyThatGoogleSearchWorks(){
+        public boolean verifyThatGoogleSearchWorks() {
             Selenide
                     .open("http://www.google.com");
             $x("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]")
@@ -19,21 +19,26 @@ public class GoogleSearchButtonTest {
                     .sendKeys(Keys.ENTER);
             $x("//h3[contains(text(),'Test automation - Wikipedia')]");
 
-        public boolean verifyThatGoogleSearchWorks() {
-            Selenide
-                    .open("http://www.google.com");
-            $x("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]")
-                    .setValue("test automation");
+            boolean verifyThatGoogleSearchWorks;
+            {
+                Selenide
+                        .open("http://www.google.com");
+                $x("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/input[1]")
+                        .setValue("test automation");
 
-                    public boolean isSearchButtonVisible;{
-                try {
-                    $x("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]").shouldBe(Condition.visible);
-                    return true;
+                boolean isSearchButtonVisible;
+                {
+                    try {
+                        $x("//body/div[1]/div[3]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]").shouldBe(Condition.visible);
+                        return true;
 
-                }catch (AssertionError ex){
-                    return false;
+                    } catch (AssertionError ex) {
+                        return false;
+                    }
+
                 }
             }
+
+
         }
     }
-
